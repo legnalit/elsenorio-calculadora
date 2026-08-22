@@ -41,7 +41,7 @@ PRODUCTOS_ALMACEN = {
 }
 
 st.sidebar.header("⚙️ Configuración")
-api_key = st.sidebar.text_input("Introduce tu OpenAI API Key", type="password")
+
 
 opciones_menu = ["Selecciona una opción"] + list(PRODUCTOS_ALMACEN.keys())
 opcion_obra = st.selectbox("¿Qué tipo de obra vas a realizar?", opciones_menu)
