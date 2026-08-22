@@ -2,7 +2,12 @@ import streamlit as st
 from openai import OpenAI
 import base64
 import re
-
+if "openai_key" in st.secrets:
+    api_key = st.secrets["openai_key"]
+    openai_key = api_key
+else:
+    st.warning("Falta configurar la clave de API de OpenAI en los secretos del servidor.")
+    api_key = None
 st.set_page_config(page_title="Calculadora Inteligente de Materiales", page_icon="🏗️", layout="centered")
 
 st.title("🏗️ Calculadora de Materiales con IA")
